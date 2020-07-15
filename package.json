@@ -17,9 +17,11 @@
     "test": "jest"
   },
   "dependencies": {
+    "@amcharts/amcharts4": "^4.9.30",
     "@nuxt/typescript-runtime": "^0.4.10",
     "@nuxtjs/axios": "^5.11.0",
     "@nuxtjs/pwa": "^3.0.0-beta.20",
+    "@types/amcharts": "^3.21.6",
     "nuxt": "^2.13.0",
     "nuxt-property-decorator": "^2.7.2"
   },

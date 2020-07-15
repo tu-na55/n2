@@ -25,7 +25,8 @@ module.exports = {
   // add your custom rules here
   rules: {
     'linebreak-style': ['error', 'unix'],
-    indent: ['error', 2],
+
+    indent: ['error', 2, { SwitchCase: 1 }],
     quotes: ['warn', 'single'],
     semi: ['error', 'never'],
     'generator-star-spacing': 'off',

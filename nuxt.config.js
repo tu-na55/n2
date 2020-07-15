@@ -43,7 +43,10 @@ export default {
    ** Plugins to load before mounting the App
    ** https://nuxtjs.org/guide/plugins
    */
-  plugins: [{ src: '@/plugins/vuetify', ssr: false }],
+  plugins: [
+    { src: '@/plugins/vuetify', ssr: false },
+    // { src: '@/plugins/create-sw.js', ssr: false },
+  ],
   /*
    ** Auto import components
    ** See https://nuxtjs.org/api/configuration-components
@@ -68,31 +71,33 @@ export default {
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
-    '@nuxtjs/pwa',
+    // '@nuxtjs/pwa',
   ],
-  workbox: {
-    //     // キャッシュの設定
-    //     // dev: true, //開発環境でもPWAできるように
-    // swDest: 'static/sw.js',
-    importScripts: ['main-sw.js'],
-    //     // skipWaiting: true,
-    //     // clientsClaim: true,
-    //     // runtimeCaching: [
-    //     //   {
-    //     //     // APIから取得した結果
-    //     //     urlPattern: '/api/xxxx/.*',
-    //     //     handler: 'cacheFirst',
-    //     //     method: 'GET',
-    //     //     strategyOptions: {
-    //     //       cacheExpiration: {
-    //     //         maxAgeSeconds: 60 * 60 * 24, // 1日
-    //     //       },
-    //     //       cacheableResponse: {
-    //     //         statuses: [200],
-    //     //       },
-    //     //     },
-    //     //   },
-    //     // ],
+  pwa: {
+    workbox: {
+      //     // キャッシュの設定
+      //     // dev: true, //開発環境でもPWAできるように
+      // swDest: 'static/sw.js',
+      // importScripts: ['custom-sw.js'],
+      skipWaiting: true,
+      clientsClaim: true,
+      //     // runtimeCaching: [
+      //     //   {
+      //     //     // APIから取得した結果
+      //     //     urlPattern: '/api/xxxx/.*',
+      //     //     handler: 'cacheFirst',
+      //     //     method: 'GET',
+      //     //     strategyOptions: {
+      //     //       cacheExpiration: {
+      //     //         maxAgeSeconds: 60 * 60 * 24, // 1日
+      //     //       },
+      //     //       cacheableResponse: {
+      //     //         statuses: [200],
+      //     //       },
+      //     //     },
+      //     //   },
+      //     // ],
+    },
   },
   manifest: {
     name: 'nuxt-app',
