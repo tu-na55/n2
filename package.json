@@ -1,0 +1,42 @@
+{
+  "name": "frontend",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt-ts",
+    "build": "nuxt-ts build",
+    "generate": "nuxt-ts generate",
+    "start": "nuxt-ts start",
+    "export": "nuxt-ts export",
+    "serve": "nuxt-ts serve",
+    "lint": "yarn lint:ts_jest",
+    "lint:ts": "eslint --ext .ts,.js,.vue --ignore-path .gitignore .",
+    "lint:ts_jest": "eslint --ext .ts,.js,.vue --ignore-path .gitignore ./src ./test",
+    "lint:fix": "eslint --ext .ts,.js,.vue --ignore-path .gitignore ./src --fix",
+    "lint:fix_jest": "eslint --ext .ts,.js,.vue --ignore-path .gitignore ./src ./test --fix",
+    "test": "jest"
+  },
+  "dependencies": {
+    "@nuxt/typescript-runtime": "^0.4.10",
+    "@nuxtjs/axios": "^5.11.0",
+    "@nuxtjs/pwa": "^3.0.0-beta.20",
+    "nuxt": "^2.13.0",
+    "nuxt-property-decorator": "^2.7.2"
+  },
+  "devDependencies": {
+    "@nuxt/typescript-build": "^1.0.3",
+    "@nuxtjs/eslint-config": "^3.0.0",
+    "@nuxtjs/eslint-config-typescript": "^2.0.0",
+    "@nuxtjs/eslint-module": "^2.0.0",
+    "@nuxtjs/vuetify": "^1.11.2",
+    "@types/node": "^14.0.23",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.2.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-loader": "^4.0.2",
+    "eslint-plugin-nuxt": "^1.0.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "material-design-icons-iconfont": "^5.0.1",
+    "prettier": "^2.0.5"
+  }
+}
