@@ -105,7 +105,7 @@ export default {
     // title: 'nuxt-title',
     lang: 'ja',
     display: 'standalone',
-    // display: 'minimal-ui',s
+    // display: 'minimal-ui',
 
     start_url: '/',
     // start_url: 'index.html',
